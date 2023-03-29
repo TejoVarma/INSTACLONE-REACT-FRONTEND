@@ -1,0 +1,62 @@
+@media screen and (max-width:500px) 
+{
+    .container {
+        width: 400px;
+      }
+      .camera {
+        margin-left: 190px;
+      }
+      .posts {
+        width: 350px;
+      }
+      .more {
+        margin-left: 60px;
+      }
+
+      .post-image {
+        width: 100%;
+        max-height: 400px;
+      } 
+
+      .home
+      {
+        width: 412px;
+        margin: 30px auto;
+      }
+      .contents
+      {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .thumbnail
+      {
+        margin-top: 150px;
+        width: 100%;
+        height: 400px;
+      }
+      .nav
+      {
+        margin-left: 25px;
+      }
+      .field-container
+      {
+        width: 100%;
+      }
+      #file
+      {
+        width: 90%;
+      }
+      #author
+      {
+        width: 43%;
+      }
+      #location
+      {
+        width: 43%;
+      }
+      #description
+      {
+        width: 90%;
+      }
+}
