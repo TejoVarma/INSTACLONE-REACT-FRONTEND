@@ -54,7 +54,7 @@ export default function NewPostForm(){
                     }}/>
                 </div>
                 <div className="field-container">
-                    <input type={"text"} id="author" name="name" placeholder="Author" value={formData.author} required onChange={(e)=>{
+                    <input type={"text"} id="author" name="name" placeholder="Author" value={formData.author} maxLength = {15} required onChange={(e)=>{
                         setFormData(data=>{
                             return {
                                 ...data,
@@ -62,7 +62,7 @@ export default function NewPostForm(){
                             }
                         })
                     }}/>
-                    <input type={"text"} id="location" name="location" placeholder="Location" value={formData.location} required onChange={(e)=>{
+                    <input type={"text"} id="location" name="location" placeholder="Location" value={formData.location} maxLength = {20} required onChange={(e)=>{
                         setFormData(data => {
                             return {
                                 ...data,

@@ -17,7 +17,7 @@ export default function Posts({ post }) {
             <section className="image">
                 <img className="post-image" src={`https://instaclone-nodejs-knen.onrender.com/${image}`} alt=""></img>
             </section>
-            <footer>
+            <footer className="footer">
                 <div className="likes-info">
                     <div className="like-section">
                         <div className="like-share">
@@ -37,8 +37,5 @@ export default function Posts({ post }) {
                 </div>
             </footer>
         </div>
-        <div>
-        </div>
     </>
-
 }
