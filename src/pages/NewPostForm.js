@@ -1,10 +1,10 @@
 import React from "react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { List } from "../components/Context";
 import { newPost } from "../utils/data";
 
 export default function NewPostForm(){
+    const [posts, setPosts] = useState([]);
     const [formData, setFormData] = useState({
         image : "",
         author : "",
@@ -12,7 +12,6 @@ export default function NewPostForm(){
         description : ""
     });
     const [disabled,setDisabled] = useState(false)
-    const {addNewPost} = useContext(List);
     const navigate = useNavigate();
     function formSubmit(e) {
         e.preventDefault();
@@ -25,7 +24,8 @@ export default function NewPostForm(){
         newPost(post)
         .then((res) => {
             if(res.status === "Success") {
-                addNewPost(res.result)
+                const newPost = [res.result, ...posts]
+                setPosts(newPost);
                 setFormData({
                     image : "",
                     author : "",
