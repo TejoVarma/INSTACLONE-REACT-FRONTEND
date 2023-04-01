@@ -3,7 +3,6 @@ import Posts from "../components/Posts";
 import { getPosts } from "../utils/data";
 
 export default function ViewPosts(){
-    // const {posts} = useContext(List);
     let [posts,setPosts] = useState([]);
     useEffect(()=>{
         getPosts()
